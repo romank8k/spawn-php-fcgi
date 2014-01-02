@@ -1,0 +1,12 @@
+[Unit]
+Description=PHP FastCGI instance spawner
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/spawn-php-fcgi 2
+
+User=%i
+Group=%i
+
+[Install]
+WantedBy=multi-user.target
