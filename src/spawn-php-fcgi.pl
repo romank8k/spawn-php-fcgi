@@ -87,6 +87,9 @@ if ($num_children >= 0) {
   $ENV{'PHP_FCGI_CHILDREN'} = $num_children;
 }
 
+# Number of requests served by a single php-cgi process before it will be restarted.
+$ENV{'PHP_FCGI_MAX_REQUESTS'} = '1024';
+
 for my $sd_fh (@{$sd_fhs_ref}) {
   # Alias the file descriptor used for bidirectional FCGI communication (same as STDIN).
   open(my $fcgi_fh, "+<&=", FCGI_LISTENSOCK_FILENO);

@@ -123,6 +123,9 @@ int main(int argc, char** argv) {
     putenv(cgi_childs);
   }
 
+  // Number of requests served by a single php-cgi process before it will be restarted.
+  putenv("PHP_FCGI_MAX_REQUESTS=1024");
+
   // FastCGI programs read from and write to fd 'FCGI_LISTENSOCK_FILENO'.
   close(FCGI_LISTENSOCK_FILENO);
   dup2(SD_LISTEN_FDS_START, FCGI_LISTENSOCK_FILENO);
