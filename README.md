@@ -10,7 +10,7 @@ It will then automatically restart the service (with the socket being passed to 
 
 #### Usage
 
-This will, by default, compile the C implementation and install the binary to `/usr/bin/spawn-php-fcgi`.
+This will, by default, compile the C implementation and install the binary to `/usr/local/bin/spawn-php-fcgi`.
 
 ```bash
 make

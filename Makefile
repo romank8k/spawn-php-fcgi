@@ -11,7 +11,7 @@ $(TARGET): $(OBJS)
 all: $(TARGET)
 
 install:
-	cp $(TARGET) /usr/bin/spawn-php-fcgi
+	cp $(TARGET) /usr/local/bin/spawn-php-fcgi
 	cp $(SYSTEMD_SOCKET_FILE) /etc/systemd/system/$(SYSTEMD_SOCKET_FILE)
 	cp $(SYSTEMD_SERVICE_FILE) /etc/systemd/system/$(SYSTEMD_SERVICE_FILE)
 
